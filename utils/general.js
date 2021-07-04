@@ -1,6 +1,6 @@
 const http = require("http");
-const STGamePlayer = require("./gameplayer.js");
-const STTeam       = require("./team.js");
+const STGamePlayer = require("../struct/gameplayer.js");
+const STTeam       = require("../struct/team.js");
 
 const percent = (n, t) => Math.round(n / t * 100);
 

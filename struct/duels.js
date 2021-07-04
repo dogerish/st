@@ -1,4 +1,4 @@
-const { percent } = require("./utils.js");
+const { percent } = require("../utils/general.js");
 
 class STDuels
 {

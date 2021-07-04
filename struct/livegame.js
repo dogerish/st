@@ -1,4 +1,4 @@
-const { getTeamsAndPlayers } = require("./utils.js");
+const { getTeamsAndPlayers } = require("../utils/general.js");
 
 class STLiveGame
 {

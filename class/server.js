@@ -1,8 +1,8 @@
-const { requestv2 } = require("./requests.js");
-const STAsync       = require("./base.js");
-const STLiveGame    = require("./livegame.js");
-const STServerInfo  = require("./serverinfo.js");
-const STCountry     = require("./country.js");
+const { requestv2 } = require("../utils/requests.js");
+const STAsync       = require("./async.js");
+const STLiveGame    = require("../struct/livegame.js");
+const STServerInfo  = require("../struct/serverinfo.js");
+const STCountry     = require("../struct/country.js");
 
 class STServer extends STAsync
 {

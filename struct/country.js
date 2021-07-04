@@ -1,4 +1,4 @@
-const { HOST } = require("./requests.js");
+const { HOST } = require("../utils/requests.js");
 
 class STCountry
 {

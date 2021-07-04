@@ -1,8 +1,8 @@
-const { request }  = require("./requests.js");
-const STAsync      = require("./base.js");
+const { request }  = require("../utils/requests.js");
+const STAsync      = require("./async.js");
 const STGame       = require("./game.js");
-const STClanMember = require("./clanmember.js");
-const { HTTPError, ClanNotFoundError } = require("./errors.js");
+const STClanMember = require("../struct/clanmember.js");
+const { HTTPError, ClanNotFoundError } = require("../utils/errors.js");
 
 class STClan extends STAsync
 {

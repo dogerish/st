@@ -1,10 +1,9 @@
-const STAsync       = require("./base.js");
-const { requestv2 } = require("./requests.js");
-const STCountry     = require("./country.js");
-debugger;
+const STAsync       = require("./async.js");
+const { requestv2 } = require("../utils/requests.js");
+const STCountry     = require("../struct/country.js");
 const STClan        = require("./clan.js");
-const STDuels       = require("./duels.js");
-const STPlayerStats = require("./playerstats.js");
+const STDuels       = require("../struct/duels.js");
+const STPlayerStats = require("../struct/playerstats.js");
 const STGame        = require("./game.js");
 
 class STPlayer extends STAsync
@@ -41,7 +40,6 @@ class STPlayer extends STAsync
 	// sets properties from an object recieved from the api, returns this
 	/*STPlayer*/ set(/*Object*/ from)
 	{
-		debugger;
 		if (from.country)   from.country = new STCountry(from.country, from.countryName);
 		if (from.clan)      from.clan    = new STClan(from.clanTag, from.clan);
 		if (from.duelCount) from.duels   = new STDuels(
@@ -58,5 +56,5 @@ class STPlayer extends STAsync
 		return this.copyProps(from);
 	}
 }
-debugger;
+
 module.exports = STPlayer;
