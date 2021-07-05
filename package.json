@@ -1,0 +1,24 @@
+{
+  "name": "sauertracker",
+  "version": "1.0.0",
+  "description": "Library for working with the SauerTracker API in JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dogerish/st-js.git"
+  },
+  "keywords": [
+    "sauertracker",
+    "api",
+    "sauerbraten"
+  ],
+  "author": "dogerish",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dogerish/st-js/issues"
+  },
+  "homepage": "https://github.com/dogerish/st-js#readme"
+}
