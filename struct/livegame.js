@@ -16,13 +16,13 @@ class STLiveGame
 
 	/* Input object:
 	{
-		gameMode,
 		mapName,
+		gameMode,
+		gameType,
 		timeLeft,
 		timeLeftString,
-		players,
 		teams,
-		gameType
+		players
 	} */
 	constructor(/*Object*/ obj)
 	{

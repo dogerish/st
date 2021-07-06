@@ -1,15 +1,13 @@
 const STStats = require("./stats.js");
 const STTeam  = require("./team.js");
-const STCountry = require("./country.js");
 
 class STGamePlayer
 {
 	/*
-	String    name;
-	Number    state;
-	STStats   stats;
-	STTeam    team;
-	STCountry country;
+	String  name;
+	Number  state;
+	STStats stats;
+	STTeam  team;
 	*/
 	constructor(/*Object*/ obj)
 	{

@@ -24,7 +24,6 @@ class ClanNotFoundError extends Error
 	constructor(/*String*/ clantag)
 	{
 		super(`Clan "${clantag}" not found.`);
-		this.code    = 404;
 		this.name    = "ClanNotFoundError";
 	}
 }

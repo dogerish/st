@@ -10,7 +10,7 @@ class STClan extends STAsync
 	String              tag;
 	String              title;
 	String              website;
-	STGames             games;
+	Array<STGame>       games;
 	Array<STClanMember> members;
 
 	Number              rank;
@@ -20,6 +20,7 @@ class STClan extends STAsync
 	Number              wins;
 	Number              losses;
 	Number              ties;
+	Number              totalGames;
 	*/
 	constructor(/*String*/ tag)
 	{
@@ -55,7 +56,9 @@ class STClan extends STAsync
 		if (from.games) this.games = from.games.map(game => new STGame(game.id).set(game));
 		if (from.members)
 			this.members = from.members.map(m => new STClanMember(m.name, m.lastseen));
-		return this.copyProps(from.clan);
+		this.copyProps(from.clan);
+		this.total = this.wins + this.ties + this.losses;
+		return this;
 	}
 }
 
