@@ -4,13 +4,13 @@ Library for working with the [SauerTracker](https://sauertracker.net/) API in Ja
 ## Documentation
 Documentation is not yet fully complete, but is a work in progress.
 
-### [Classes](docs/class/)
+### Classes
 * [STAsync](docs/class/async.md)
 * [STClan](docs/class/clan.md)
 * [STGame](docs/class/game.md)
 * [STServer](docs/class/server.md)
 
-### [Structures](docs/struct/)
+### Structures
 * [STClanMember](docs/struct/clanmember.md)
 * [STCountry](docs/struct/country.md)
 * [STGamePlayer](docs/struct/gameplayer.md)
@@ -20,7 +20,7 @@ Documentation is not yet fully complete, but is a work in progress.
 * [STStats](docs/struct/stats.md)
 * [STTeam](docs/struct/team.md)
 
-### [Utilities](docs/utils/)
-#### [Errors](docs/utils/errors/)
+### Utilities
+#### Errors
 * [ClanNotFoundError](docs/utils/errors/clannotfounderror.md)
 * [NoOverrideError](docs/utils/errors/nooverrideerror.md)
