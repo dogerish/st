@@ -1,5 +1,5 @@
 # STProperty
-Structure for properties used in [`STAsync._neededProps`](../class/async.md#_neededprops) classes.
+Structure for properties used in [`STAsync`](../class/async.md) classes.
 
 ## Constructor
 ```js
