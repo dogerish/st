@@ -1,4 +1,13 @@
 // custom exceptions
+class NoOverrideError extends Error
+{
+	constructor(/*Object*/ who, /*String*/ method)
+	{
+		super(`${who.constructor.name} class missing a ${method} override.`);
+		this.name = "NoOverrideError";
+	}
+}
+
 class HTTPError extends Error
 {
 	constructor(/*Number*/ code, /*String*/ message, /*String*/ apimessage)
@@ -22,6 +31,7 @@ class ClanNotFoundError extends Error
 
 module.exports =
 {
+	NoOverrideError,
 	HTTPError,
 	ClanNotFoundError
 };

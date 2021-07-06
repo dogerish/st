@@ -1,6 +1,7 @@
 module.exports =
 {
 	// classes
+	STAsync:  require("./class/async.js"),
 	STClan:   require("./class/clan.js"),
 	STGame:   require("./class/game.js"),
 	STPlayer: require("./class/player.js"),
