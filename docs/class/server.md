@@ -60,3 +60,10 @@ The server's rank.
 
 ## Methods
 Meets specification in [STAsync](async.md).
+### list
+```js
+static async /*Array<STServer>*/ list()
+```
+Static method that asynchronously gets a list of all servers online.
+#### Return: Array<[STServer](server.md)>
+Array of all servers online.

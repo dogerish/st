@@ -6,6 +6,10 @@ const STCountry     = require("../struct/country.js");
 
 class STServer extends STAsync
 {
+	// list all servers online
+	static async /*Array<STServer>*/ list()
+	{ return (await requestv2`servers`).map(s => new STServer(s.host, s.port).set(s)); }
+
 	/*
 	String       host;
 	Number       port;
