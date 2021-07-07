@@ -8,19 +8,23 @@ Documentation is not yet fully complete, but is a work in progress.
 * [STAsync](docs/class/async.md)
 * [STClan](docs/class/clan.md)
 * [STGame](docs/class/game.md)
+* [STPlayer](docs/class/player.md)
 * [STServer](docs/class/server.md)
 
 ### Structures
 * [STClanMember](docs/struct/clanmember.md)
 * [STCountry](docs/struct/country.md)
+* [STDuels](docs/struct/duels.md)
 * [STGamePlayer](docs/struct/gameplayer.md)
 * [STLiveGame](docs/struct/livegame.md)
+* [STPlayerStats](docs/struct/playerstats.md)
 * [STProperty](docs/struct/property.md)
 * [STServerInfo](docs/struct/serverinfo.md)
 * [STStats](docs/struct/stats.md)
 * [STTeam](docs/struct/team.md)
 
 ### Utilities
+* [General Utilities](docs/utils/general.md)
 #### Errors
 * [ClanNotFoundError](docs/utils/errors/clannotfounderror.md)
 * [NoOverrideError](docs/utils/errors/nooverrideerror.md)

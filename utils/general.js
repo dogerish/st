@@ -2,7 +2,7 @@ const http = require("http");
 const STGamePlayer = require("../struct/gameplayer.js");
 const STTeam       = require("../struct/team.js");
 
-const percent = (n, t) => Math.round(n / t * 100);
+const percent = /*Number*/ (/*Number*/ n, /*Number*/ t) => Math.round(n / t * 100);
 
 // returns teams and players as STTeam and STGamePlayer objects
 function /*Array<Array<STTeam>, Array<STGamePlayer>>*/ getTeamsAndPlayers(
