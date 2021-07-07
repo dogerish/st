@@ -33,7 +33,7 @@ class STLiveGame
 		this.timeLeft       = obj.timeLeft;
 		this.timeLeftString = obj.timeLeftString;
 
-		[this.teams, this.players] = getTeamsAndPlayers(obj.teams, obj.players);
+		[this.teams, this.players] = getTeamsAndPlayers(obj.teams || [], obj.players);
 	}
 }
 
