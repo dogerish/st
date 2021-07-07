@@ -18,4 +18,4 @@ String<br/>
 Might be a URL to the server's demos, or an empty string.
 ### banned
 String<br/>
-Something about the server being banned from tracking or not, usually an empty string. I'm not sure what the possible values are, so if you find any, please update this <3
+Empty string or null if the server is not banned from tracking, and otherwise a string describing the reason for the ban.
