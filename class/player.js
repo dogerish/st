@@ -1,5 +1,6 @@
 const STAsync       = require("./async.js");
 const { requestv2 } = require("../utils/requests.js");
+const { HTTPError, PlayerNotFoundError } = require("../utils/errors.js");
 const STCountry     = require("../struct/country.js");
 const STClan        = require("./clan.js");
 const STDuels       = require("../struct/duels.js");
@@ -35,7 +36,15 @@ class STPlayer extends STAsync
 	}
 
 	// fetches properties of this, returns this
-	async /*STPlayer*/ fetch() { return this.set(await requestv2`player/${this.name}`); }
+	async /*STPlayer*/ fetch()
+	{
+		try { return this.set(await requestv2`player/${this.name}`); }
+		catch (e)
+		{
+			if (!(e instanceof HTTPError) || e.code != 404) throw e;
+			else throw new PlayerNotFoundError(this.name);
+		}
+	}
 
 	// sets properties from an object recieved from the api, returns this
 	/*STPlayer*/ set(/*Object*/ from)

@@ -60,4 +60,7 @@ Array<[STGame](game.md)><br/>
 An array of the last ten games played.
 
 ## Methods
-Up to [STAsync](async.md) specifications.
+Up to [STAsync](async.md) specifications. Specific notes:
+### fetch
+#### Errors
+Throws a [PlayerNotFoundError](../utils/errors/playernotfounderror.md) if the player isn't found.

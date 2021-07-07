@@ -31,4 +31,5 @@ Documentation is not yet fully complete, but is a work in progress.
 * [HTTPError](docs/utils/errors/httperror.md)
 * [NonJSONReturnError](docs/utils/errors/nonjsonreturnerror.md)
 * [NoOverrideError](docs/utils/errors/nooverrideerror.md)
+* [PlayerNotFoundError](docs/utils/errors/playernotfounderror.md)
 * [SelfAwareError](docs/utils/errors/selfawareerror.md)

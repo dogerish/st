@@ -35,11 +35,18 @@ class ClanNotFoundError extends SelfAwareError
 	{ super(`Clan "${clantag}" not found.`); }
 }
 
+class PlayerNotFoundError extends SelfAwareError
+{
+	constructor(/*String*/ name)
+	{ super(`Player "${name}" not found.`); }
+}
+
 module.exports =
 {
 	SelfAwareError,
 	NoOverrideError,
 	NonJSONReturnError,
 	HTTPError,
-	ClanNotFoundError
+	ClanNotFoundError,
+	PlayerNotFoundError
 };
