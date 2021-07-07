@@ -1,5 +1,5 @@
 const http = require("http");
-const { HTTPError } = require("./errors.js");
+const { HTTPError, NonJSONReturnError } = require("./errors.js");
 
 const HOST = "http://sauertracker.net";
 // make a request to API v1
@@ -19,13 +19,28 @@ function /*Promise<Object>*/ request(parts, ...fillers)
 			res.on("data", chunk => data += chunk);
 			res.on("end", () =>
 			{
-				data = JSON.parse(data);
+				try { data = JSON.parse(data); }
+				catch (e)
+				{
+					if (res.statusCode != 200)
+						return reject(new HTTPError(
+							res.statusCode,
+							res.statusMessage
+						));
+					else if (e instanceof SyntaxError)
+						return reject(new NonJSONReturnError(
+							res.req.host + res.req.path
+						));
+					else
+						return reject(e);
+				}
 				if (res.statusCode == 200) resolve(data);
-				else reject(new HTTPError(
+				else
+					reject(new HTTPError(
 						res.statusCode,
 						res.statusMessage,
 						data.error
-				));
+					));
 			});
 		});
 		req.end();

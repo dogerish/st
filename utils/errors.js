@@ -1,36 +1,46 @@
 // custom exceptions
-class NoOverrideError extends Error
+class SelfAwareError extends Error
 {
-	constructor(/*Object*/ who, /*String*/ method)
+	constructor(...args)
 	{
-		super(`${who.constructor.name} class missing a ${method} override.`);
-		this.name = "NoOverrideError";
+		super(...args);
+		this.name = this.constructor.name;
 	}
 }
 
-class HTTPError extends Error
+class NoOverrideError extends SelfAwareError
+{
+	constructor(/*Object*/ who, /*String*/ method)
+	{ super(`${who.constructor.name} class missing a ${method} override.`); }
+}
+
+class NonJSONReturnError extends SelfAwareError
+{
+	constructor(/*String*/ url)
+	{ super(`"http://${url}" returned non-JSON data.`); }
+}
+
+class HTTPError extends SelfAwareError
 {
 	constructor(/*Number*/ code, /*String*/ message, /*String*/ apimessage)
 	{
 		super(`${code}: ${apimessage || message}`);
 		this.defMessage = message;
 		this.code       = code;
-		this.name       = "HTTPError";
 	}
 }
 
-class ClanNotFoundError extends Error
+class ClanNotFoundError extends SelfAwareError
 {
 	constructor(/*String*/ clantag)
-	{
-		super(`Clan "${clantag}" not found.`);
-		this.name    = "ClanNotFoundError";
-	}
+	{ super(`Clan "${clantag}" not found.`); }
 }
 
 module.exports =
 {
+	SelfAwareError,
 	NoOverrideError,
+	NonJSONReturnError,
 	HTTPError,
 	ClanNotFoundError
 };
