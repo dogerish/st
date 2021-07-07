@@ -25,6 +25,10 @@ Documentation is not yet fully complete, but is a work in progress.
 
 ### Utilities
 * [General Utilities](docs/utils/general.md)
+* [Requests](docs/utils/requests.md)
 #### Errors
 * [ClanNotFoundError](docs/utils/errors/clannotfounderror.md)
+* [HTTPError](docs/utils/errors/httperror.md)
+* [NonJSONReturnError](docs/utils/errors/nonjsonreturnerror.md)
 * [NoOverrideError](docs/utils/errors/nooverrideerror.md)
+* [SelfAwareError](docs/utils/errors/selfawareerror.md)

@@ -1,4 +1,4 @@
-# NoOverrideError extends Error
+# NoOverrideError extends [SelfAwareError](selfawareerror.md)
 Error for when a method which needs to be overridden to be used is not overridden.
 
 ## Constructor

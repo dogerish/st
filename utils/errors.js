@@ -1,4 +1,3 @@
-// custom exceptions
 class SelfAwareError extends Error
 {
 	constructor(...args)
@@ -25,8 +24,8 @@ class HTTPError extends SelfAwareError
 	constructor(/*Number*/ code, /*String*/ message, /*String*/ apimessage)
 	{
 		super(`${code}: ${apimessage || message}`);
-		this.defMessage = message;
 		this.code       = code;
+		this.defMessage = message;
 	}
 }
 

@@ -1,4 +1,4 @@
-# ClanNotFoundError extends Error
+# ClanNotFoundError extends [SelfAwareError](selfawareerror.md)
 Error for when SauerTracker fails to find a clan.
 
 ## Constructor
