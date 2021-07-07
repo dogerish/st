@@ -38,7 +38,7 @@ class STServer extends STAsync
 	}
 
 	// fetch and return this
-	async /*STServer*/ fetch() { this.set(await requestv2`server/${this.host}/${this.port}`); }
+	async /*STServer*/ fetch() { return this.set(await requestv2`server/${this.host}/${this.port}`); }
 
 	// set props based on reutrn from API call, returns this
 	/*STServer*/ set(/*Object*/ from)
