@@ -1,8 +1,8 @@
-const { request }  = require("../utils/requests.js");
+const { request, is404 }  = require("../utils/requests.js");
+const { ClanNotFoundError } = require("../utils/errors.js");
 const STAsync      = require("./async.js");
 const STGame       = require("./game.js");
 const STClanMember = require("../struct/clanmember.js");
-const { HTTPError, ClanNotFoundError } = require("../utils/errors.js");
 
 class STClan extends STAsync
 {
@@ -38,11 +38,7 @@ class STClan extends STAsync
 	async /*STClan*/ fetch()
 	{
 		try { return this.set(await request`clan/${this.tag}`); }
-		catch (e)
-		{
-			if (!(e instanceof HTTPError)) throw e;
-			if (e.code == 404) throw new ClanNotFoundError(this.tag);
-		}
+		catch (e) { throw is404(e) ? new ClanNotFoundError(this.tag) : e; }
 	}
 
 	// set based on return from API, return this

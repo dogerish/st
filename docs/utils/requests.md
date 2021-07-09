@@ -30,3 +30,13 @@ Use as a string formatter.
 ### Return: Promise<Object>
 ### Errors
 Same as [request](#request).
+
+## is404
+```js
+/*Boolean*/ (/*Error*/ error) => error instanceof HTTPError && error.code == 404;
+```
+### Arguments
+1. `/*Error*/ error`
+	* The error to check.
+### Return: Boolean
+Whether or not the error is an [HTTPError](errors/httperror.md) with code 404.

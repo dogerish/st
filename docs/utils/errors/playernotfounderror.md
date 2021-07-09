@@ -1,4 +1,4 @@
-# PlayerNotFoundError extends [SelfAwareError](selfawareerror.md)
+# PlayerNotFoundError extends [NotFoundError](notfounderror.md)
 Error for when a player isn't found.
 
 ## Constructor

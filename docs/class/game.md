@@ -48,4 +48,7 @@ String<br/>
 The name of the map this game was played on.
 
 ## Methods
-To specification of [STAsync](async.md).
+To specification of [STAsync](async.md). Notes:
+### fetch
+#### Errors
+Throws a [GameNotFoundError](../utils/errors/gamenotfounderror.md) if the game isn't found.

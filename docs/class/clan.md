@@ -50,4 +50,5 @@ Total number of games the clan has played.
 ## Methods
 Overrides all needed functions to specification of [STAsync](async.md). Specific notes:
 ### fetch
+#### Errors
 Throws a [ClanNotFoundError](../utils/errors/clannotfounderror.md) if the clan is not found by the API.

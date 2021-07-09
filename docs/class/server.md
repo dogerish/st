@@ -59,7 +59,12 @@ How many games have been played on the server.
 The server's rank.
 
 ## Methods
-Meets specification in [STAsync](async.md).
+Meets specification in [STAsync](async.md). Notes:
+### fetch
+#### Errors
+Throws a [ServerNotFoundError](../utils/errors/servernotfounderror.md) if the server isn't found.
+
+## Static Methods
 ### list
 ```js
 static async /*Array<STServer>*/ list()

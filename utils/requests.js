@@ -47,12 +47,16 @@ function /*Promise<Object>*/ request(parts, ...fillers)
 	});
 };
 // make a request to API v2
-const /*Promise<Object>*/ requestv2 =
-	([a, ...rest], ...fillers) => request(["v2/" + a, ...rest], ...fillers);
+const requestv2 = /*Promise<Object>*/ ([a, ...rest], ...fillers) =>
+	request(["v2/" + a, ...rest], ...fillers);
+
+// whether or not the error is an HTTPError with code 404
+const is404 = /*Boolean*/ (/*Error*/ error) => error instanceof HTTPError && error.code == 404;
 
 module.exports =
 {
 	HOST,
 	request,
-	requestv2
+	requestv2,
+	is404
 };

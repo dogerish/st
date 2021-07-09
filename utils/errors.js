@@ -29,17 +29,19 @@ class HTTPError extends SelfAwareError
 	}
 }
 
-class ClanNotFoundError extends SelfAwareError
+class NotFoundError extends SelfAwareError
 {
-	constructor(/*String*/ clantag)
-	{ super(`Clan "${clantag}" not found.`); }
+	constructor(/*StringResolvable*/ type, /*StringResolvable*/ what)
+	{ super(`${type} "${what}" not found.`); }
 }
-
-class PlayerNotFoundError extends SelfAwareError
-{
-	constructor(/*String*/ name)
-	{ super(`Player "${name}" not found.`); }
-}
+class ClanNotFoundError extends NotFoundError
+{ constructor(/*String*/ clantag) { super("Clan tag", clantag); } }
+class GameNotFoundError extends NotFoundError
+{ constructor(/*Number*/ id) { super("Game ID", id); } }
+class PlayerNotFoundError extends NotFoundError
+{ constructor(/*String*/ name) { super("Player", name); } }
+class ServerNotFoundError extends NotFoundError
+{ constructor(/*String*/ host, /*Number*/ port) { super("Server", `${host}:${port}`); }}
 
 module.exports =
 {
@@ -47,6 +49,9 @@ module.exports =
 	NoOverrideError,
 	NonJSONReturnError,
 	HTTPError,
+	NotFoundError,
 	ClanNotFoundError,
-	PlayerNotFoundError
+	GameNotFoundError,
+	PlayerNotFoundError,
+	ServerNotFoundError
 };

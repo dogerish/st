@@ -1,5 +1,6 @@
-const { requestv2          } = require("../utils/requests.js");
+const { requestv2, is404   } = require("../utils/requests.js");
 const { getTeamsAndPlayers } = require("../utils/general.js");
+const { GameNotFoundError  } = require("../utils/errors.js");
 const STAsync   = require("./async.js");
 const STServer  = require("./server.js");
 const STCountry = require("../struct/country.js");
@@ -33,7 +34,11 @@ class STGame extends STAsync
 	}
 
 	// fetch and return this
-	async /*STGame*/ fetch() { return this.set(await requestv2`game/${this.id}`); }
+	async /*STGame*/ fetch()
+	{
+		try { return this.set(await requestv2`game/${this.id}`); }
+		catch (e) { throw is404(e) ? new GameNotFoundError(this.id) : e; }
+	}
 
 	/*STGame*/ set(/*Object*/ from)
 	{

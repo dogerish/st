@@ -1,4 +1,5 @@
-const { requestv2 } = require("../utils/requests.js");
+const { requestv2           } = require("../utils/requests.js");
+const { ServerNotFoundError } = require("../utils/errors.js");
 const STAsync       = require("./async.js");
 const STLiveGame    = require("../struct/livegame.js");
 const STServerInfo  = require("../struct/serverinfo.js");
@@ -42,7 +43,14 @@ class STServer extends STAsync
 	}
 
 	// fetch and return this
-	async /*STServer*/ fetch() { return this.set(await requestv2`server/${this.host}/${this.port}`); }
+	async /*STServer*/ fetch()
+	{
+		if ((await requestv2`servers`).some(
+			({ host, port }) => host == this.host && port == this.port
+		))
+			return this.set(await requestv2`server/${this.host}/${this.port}`);
+		throw new ServerNotFoundError(this.host, this.port);
+	}
 
 	// set props based on reutrn from API call, returns this
 	/*STServer*/ set(/*Object*/ from)

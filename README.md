@@ -2,14 +2,14 @@
 Library for working with the [SauerTracker](https://sauertracker.net/) API in JavaScript. Created for [dogerbot-v2](https://github.com/dogerish/dogerbot-v2).
 
 ## Documentation
-Documentation is not yet fully complete, but is a work in progress.
+Documentation should be complete, and hopefully be updated as the library gains functionality. Please make an issue or let me know another way if you feel something is missing or incorrect.
 
 ### Classes
 * [STAsync](docs/class/async.md)
-* [STClan](docs/class/clan.md)
-* [STGame](docs/class/game.md)
-* [STPlayer](docs/class/player.md)
-* [STServer](docs/class/server.md)
+	* [STClan](docs/class/clan.md)
+	* [STGame](docs/class/game.md)
+	* [STPlayer](docs/class/player.md)
+	* [STServer](docs/class/server.md)
 
 ### Structures
 * [STClanMember](docs/struct/clanmember.md)
@@ -27,9 +27,12 @@ Documentation is not yet fully complete, but is a work in progress.
 * [General Utilities](docs/utils/general.md)
 * [Requests](docs/utils/requests.md)
 #### Errors
-* [ClanNotFoundError](docs/utils/errors/clannotfounderror.md)
-* [HTTPError](docs/utils/errors/httperror.md)
-* [NonJSONReturnError](docs/utils/errors/nonjsonreturnerror.md)
-* [NoOverrideError](docs/utils/errors/nooverrideerror.md)
-* [PlayerNotFoundError](docs/utils/errors/playernotfounderror.md)
 * [SelfAwareError](docs/utils/errors/selfawareerror.md)
+	* [NoOverrideError](docs/utils/errors/nooverrideerror.md)
+	* [NonJSONReturnError](docs/utils/errors/nonjsonreturnerror.md)
+	* [HTTPError](docs/utils/errors/httperror.md)
+	* [NotFoundError](docs/utils/errors/notfounderror.md)
+		* [ClanNotFoundError](docs/utils/errors/clannotfounderror.md)
+		* [GameNotFoundError](docs/utils/errors/gamenotfounderror.md)
+		* [PlayerNotFoundError](docs/utils/errors/playernotfounderror.md)
+		* [ServerNotFoundError](docs/utils/errors/servernotfounderror.md)

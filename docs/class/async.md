@@ -39,6 +39,8 @@ async /*STAsync*/ fetch()
 Asynchronously fetches the data for this object and then updates [`this._full`](#_full). Must be overridden by child classes or else it will simply throw a [NoOverrideError](../utils/errors/nooverrideerror.md).
 #### Return: [STAsync](async.md)
 Returns `this`.
+#### Errors
+Should throw an instance of [NotFoundError](../utils/errors/notfounderror.md) if whatever this is representing isn't found.
 
 ### set
 ```js
