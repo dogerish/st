@@ -27,7 +27,7 @@ class STGame extends STAsync
 			[
 				"id",      "date",  "server",
 				"clients", "teams", "players", "meta",
-				"mode",    "type",  "?typea",  "map"
+				"mode",    "type",  "map"
 			],
 			{ id }
 		);
