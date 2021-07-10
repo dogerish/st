@@ -15,6 +15,7 @@ module.exports =
 	STLiveGame:    require("./struct/livegame.js"),
 	STPlayerStats: require("./struct/playerstats.js"),
 	STProperty:    require("./struct/property.js"),
+	STResults:     require("./struct/results.js"),
 	STServerInfo:  require("./struct/serverinfo.js"),
 	STStats:       require("./struct/stats.js"),
 	STTeam:        require("./struct/team.js"),

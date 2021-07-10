@@ -22,6 +22,7 @@ Documentation should be complete, and hopefully be updated as the library gains 
 * [STLiveGame](docs/struct/livegame.md)
 * [STPlayerStats](docs/struct/playerstats.md)
 * [STProperty](docs/struct/property.md)
+* [STResults](docs/struct/results.md)
 * [STServerInfo](docs/struct/serverinfo.md)
 * [STStats](docs/struct/stats.md)
 * [STTeam](docs/struct/team.md)

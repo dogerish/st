@@ -2,11 +2,18 @@ const { requestv2, is404   } = require("../utils/requests.js");
 const { getTeamsAndPlayers } = require("../utils/general.js");
 const { GameNotFoundError  } = require("../utils/errors.js");
 const STAsync   = require("./async.js");
+const STResults = require("../struct/results.js");
 const STServer  = require("./server.js");
 const STCountry = require("../struct/country.js");
 
 class STGame extends STAsync
 {
+	static async /*STResults*/ find(/*String*/ host, /*Number*/ port)
+	{
+		let r = await requestv2`games/find?host=${host || ""}&port=${port || ""}`;
+		return new STResults(r.stats, r.results.map(g => new STGame(g.id).set(g)));
+	}
+
 	/*
 	Number                id;
 	Date                  date;

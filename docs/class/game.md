@@ -52,3 +52,17 @@ To specification of [STAsync](async.md). Notes:
 ### fetch
 #### Errors
 Throws a [GameNotFoundError](../utils/errors/gamenotfounderror.md) if the game isn't found.
+
+## Static Methods
+### find
+```js
+static async /*STResults*/ find(/*String*/ host, /*Number*/ port)
+```
+Asynchronously finds up to 20 games that match the given query. Both arguments are optional. Results are sorted by frags descendingly.
+#### Arguments
+1. `/*String*/ host`
+	* The host server of the game.
+2. `/*Number*/ port`
+	* The port of the server.
+#### Return: [STResults](../struct/results.md)
+The search results and stats.
