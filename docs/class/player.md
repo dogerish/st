@@ -64,3 +64,18 @@ Up to [STAsync](async.md) specifications. Specific notes:
 ### fetch
 #### Errors
 Throws a [PlayerNotFoundError](../utils/errors/playernotfounderror.md) if the player isn't found.
+
+## Static Methods
+### find
+```js
+static async find(/*String*/ name = "", /*String*/ country = "")
+```
+Finds up to 200 players matching a given query.
+#### Arguments
+1. `/*String*/ name = ""`
+	* The name to match, or an empty string to not match any name.
+	* Optional, an empty string by default.
+2. `/*String*/ country = ""`
+	* Same conditions as for `name`, but for the country. Specify as a country abbreviation, such as CA for Canada.
+#### Return: Array<STPlayer>
+Returns an array of up to 200 players that match the query.

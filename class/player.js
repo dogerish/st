@@ -9,6 +9,14 @@ const STGame        = require("./game.js");
 
 class STPlayer extends STAsync
 {
+	// find up to 200 players matching a given query
+	static async find(/*String*/ name = "", /*String*/ country = "")
+	{
+		return (await requestv2`players/find?name=${name}&country=${country}`).map(
+			player => new STPlayer(player.name).set(player)
+		);
+	}
+
 	/*
 	String        name;
 	STCountry     country;
