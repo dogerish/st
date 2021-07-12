@@ -1,11 +1,12 @@
 const STAsync       = require("./async.js");
-const { requestv2, is404    } = require("../utils/requests.js");
-const { PlayerNotFoundError } = require("../utils/errors.js");
+const { request, requestv2, is404 } = require("../utils/requests.js");
+const { PlayerNotFoundError       } = require("../utils/errors.js");
 const STCountry     = require("../struct/country.js");
 const STClan        = require("./clan.js");
 const STDuels       = require("../struct/duels.js");
 const STPlayerStats = require("../struct/playerstats.js");
 const STGame        = require("./game.js");
+const STActivity    = require("../struct/activity.js");
 
 class STPlayer extends STAsync
 {
@@ -67,6 +68,14 @@ class STPlayer extends STAsync
 			game => new STGame(game.id).set(game)
 		);
 		return this.copyProps(from);
+	}
+
+	// fetches activity data for the player
+	async /*Array<STActivity>*/ fetchActivity()
+	{
+		return (await request`player/activity/${this.name}`).activity.map(
+			x => new STActivity(new Date(x.date), x.count)
+		);
 	}
 }
 

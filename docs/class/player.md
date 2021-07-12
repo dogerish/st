@@ -64,6 +64,13 @@ Up to [STAsync](async.md) specifications. Specific notes:
 ### fetch
 #### Errors
 Throws a [PlayerNotFoundError](../utils/errors/playernotfounderror.md) if the player isn't found.
+### fetchActivity
+```js
+async /*Array<STActivity>*/ fetchActivity()
+```
+Asynchronously fetches activity data for this player
+#### Return: Array<[STActivity](../struct/activity.md)>
+An array of the number of games the player played per day for the last 15 days. Days with no games are omitted.
 
 ## Static Methods
 ### find
