@@ -63,6 +63,13 @@ Meets specification in [STAsync](async.md). Notes:
 ### fetch
 #### Errors
 Throws a [ServerNotFoundError](../utils/errors/servernotfounderror.md) if the server isn't found.
+### fetchActivity
+```js
+async /*STServerActivity*/ fetchActivity()
+```
+Asynchronously fetches server activity.
+#### Return: [STServerActivity](../struct/serveractivity.md)
+The activity on the server.
 
 ## Static Methods
 ### list

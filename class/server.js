@@ -1,9 +1,10 @@
-const { requestv2           } = require("../utils/requests.js");
+const { request, requestv2  } = require("../utils/requests.js");
 const { ServerNotFoundError } = require("../utils/errors.js");
-const STAsync       = require("./async.js");
-const STLiveGame    = require("../struct/livegame.js");
-const STServerInfo  = require("../struct/serverinfo.js");
-const STCountry     = require("../struct/country.js");
+const STAsync          = require("./async.js");
+const STLiveGame       = require("../struct/livegame.js");
+const STServerInfo     = require("../struct/serverinfo.js");
+const STCountry        = require("../struct/country.js");
+const STServerActivity = require("../struct/serveractivity.js");
 
 class STServer extends STAsync
 {
@@ -61,6 +62,13 @@ class STServer extends STAsync
 		for (let key of ["totalGames", "rank"])
 			if (from[key]) from[key] = Number(from[key]);
 		return this.copyProps(from);
+	}
+
+	// fetch activity for this server
+	async /*STServerActivity*/ fetchActivity()
+	{
+		let a = await request`server/activity/${this.host}/${this.port}`;
+		return new STServerActivity(a.day, a.month);
 	}
 }
 
