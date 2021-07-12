@@ -52,3 +52,12 @@ Overrides all needed functions to specification of [STAsync](async.md). Specific
 ### fetch
 #### Errors
 Throws a [ClanNotFoundError](../utils/errors/clannotfounderror.md) if the clan is not found by the API.
+
+## Static Methods
+### list
+```js
+static async /*Array<STClan>*/ list()
+```
+Gets a list of all the clans and some info.
+#### Return: Array<STClan>
+Returns an array of all the clans with some info.

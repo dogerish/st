@@ -1,11 +1,22 @@
-const { request, is404 }  = require("../utils/requests.js");
-const { ClanNotFoundError } = require("../utils/errors.js");
+const { request, requestv2, is404 } = require("../utils/requests.js");
+const { ClanNotFoundError         } = require("../utils/errors.js");
 const STAsync      = require("./async.js");
 const STGame       = require("./game.js");
 const STClanMember = require("../struct/clanmember.js");
 
 class STClan extends STAsync
 {
+	// get list of all clans with some info sorted by rank
+	static async /*Array<STClan>*/ list()
+	{
+		return (await requestv2`clans`).clans.map(clan =>
+			new STClan(clan.tag).set({
+				info: { website: clan.website, title: clan.title },
+				clan
+			})
+		);
+	}
+
 	/*
 	String              tag;
 	String              title;
