@@ -3,6 +3,7 @@ const { ClanNotFoundError         } = require("../utils/errors.js");
 const STAsync      = require("./async.js");
 const STGame       = require("./game.js");
 const STClanMember = require("../struct/clanmember.js");
+const STWinStats   = require("../struct/winstats.js");
 
 class STClan extends STAsync
 {
@@ -27,19 +28,14 @@ class STClan extends STAsync
 	Number              rank;
 	Number              rate;
 	Number              points;
-
-	Number              wins;
-	Number              losses;
-	Number              ties;
-	Number              totalGames;
+	STWinStats          winstats;
 	*/
 	constructor(/*String*/ tag)
 	{
 		super(
 			[
 				"tag", "title", "website", "games", "members",
-				"rank", "rate", "points",
-				"wins", "losses", "ties"
+				"rank", "rate", "points",  "winstats"
 			],
 			{ tag }
 		);
@@ -63,9 +59,12 @@ class STClan extends STAsync
 		if (from.games) this.games = from.games.map(game => new STGame(game.id).set(game));
 		if (from.members)
 			this.members = from.members.map(m => new STClanMember(m.name, m.lastseen));
-		this.copyProps(from.clan);
-		this.total = this.wins + this.ties + this.losses;
-		return this;
+		if (from = from.clan)
+		{
+			this.winstats = new STWinStats(null, from.wins, from.losses, from.ties);
+			return this.copyProps(from);
+		}
+		return this.copyProps({});
 	}
 }
 

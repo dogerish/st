@@ -34,18 +34,9 @@ The win rate of this clan. `(wins + ties / 2) / totalGames`.
 ### points
 Number<br/>
 How many points the clan has. `(wins + ties / 2)^2 / totalGames`.
-### wins
-Number<br/>
-How many games this clan won.
-### losses
-Number<br/>
-How many games this clan lost.
-### ties
-Number<br/>
-How many games this clan tied.
-### totalGames
-Number<br/>
-Total number of games the clan has played.
+### winstats
+[STWinStats](../struct/winstats.md)<br/>
+The statistics on wins, losses, ties, and total games.
 
 ## Methods
 Overrides all needed functions to specification of [STAsync](async.md). Specific notes:

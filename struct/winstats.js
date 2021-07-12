@@ -1,6 +1,6 @@
 const { percent } = require("../utils/general.js");
 
-class STDuels
+class STWinStats
 {
 	/*
 	Number count;
@@ -10,7 +10,7 @@ class STDuels
 	*/
 	constructor(/*Number*/ count, /*Number*/ wins, /*Number*/ losses, /*Number*/ ties)
 	{
-		this.count  = count;
+		this.count  = count || wins + losses + ties;
 		this.wins   = wins;
 		this.losses = losses;
 		this.ties   = ties;
@@ -21,4 +21,4 @@ class STDuels
 	/*Number*/  tieRate() { return percent(this.ties,   this.count); }
 }
 
-module.exports = STDuels;
+module.exports = STWinStats;

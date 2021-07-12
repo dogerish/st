@@ -47,8 +47,8 @@ What I interpret from this:
 ?Number<br/>
 The total number of games this player has played.
 ### duels
-[STDuels](../struct/duels.md)<br/>
-Information about the player's duelling history.
+[STWinStats](../struct/winstats.md)<br/>
+Information about the player's duelling history. Wins, losses, ties, and total number of duels played.
 ### stats
 [STPlayerStats](../struct/playerstats.md)<br/>
 The player's statistics.

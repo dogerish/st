@@ -10,7 +10,6 @@ module.exports =
 	// structures
 	STClanMember:  require("./struct/clanmember.js"),
 	STCountry:     require("./struct/country.js"),
-	STDuels:       require("./struct/duels.js"),
 	STGamePlayer:  require("./struct/gameplayer.js"),
 	STLiveGame:    require("./struct/livegame.js"),
 	STMatch:       require("./struct/match.js"),
@@ -20,6 +19,7 @@ module.exports =
 	STServerInfo:  require("./struct/serverinfo.js"),
 	STStats:       require("./struct/stats.js"),
 	STTeam:        require("./struct/team.js"),
+	STWinStats:    require("./struct/winstats.js"),
 
 	// utilities
 	utils:

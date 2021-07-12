@@ -17,7 +17,6 @@ Documentation should be complete, and hopefully be updated as the library gains 
 ### Structures
 * [STClanMember](docs/struct/clanmember.md)
 * [STCountry](docs/struct/country.md)
-* [STDuels](docs/struct/duels.md)
 * [STGamePlayer](docs/struct/gameplayer.md)
 * [STLiveGame](docs/struct/livegame.md)
 * [STMatch](docs/struct/match.md)
@@ -27,6 +26,7 @@ Documentation should be complete, and hopefully be updated as the library gains 
 * [STServerInfo](docs/struct/serverinfo.md)
 * [STStats](docs/struct/stats.md)
 * [STTeam](docs/struct/team.md)
+* [STWinStats](docs/struct/winstats.md)
 
 ### Utilities
 * [General Utilities](docs/utils/general.md)

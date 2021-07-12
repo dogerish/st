@@ -1,4 +1,5 @@
-# STDuels
+# STWinStats
+Statistics on count, wins, losses and ties.
 
 ## Constructor
 ```js
@@ -10,7 +11,7 @@ See [properties](#properties).
 ## Properties
 ### count
 Number<br/>
-Amount played.
+Amount played. Automatically calculated if it evaluates to false in the constructor.
 ### wins
 Number<br/>
 Amount won.

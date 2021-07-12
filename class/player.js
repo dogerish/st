@@ -3,7 +3,7 @@ const { request, requestv2, is404 } = require("../utils/requests.js");
 const { PlayerNotFoundError       } = require("../utils/errors.js");
 const STCountry     = require("../struct/country.js");
 const STClan        = require("./clan.js");
-const STDuels       = require("../struct/duels.js");
+const STWinStats    = require("../struct/winstats.js");
 const STPlayerStats = require("../struct/playerstats.js");
 const STGame        = require("./game.js");
 const STActivity    = require("../struct/activity.js");
@@ -26,7 +26,7 @@ class STPlayer extends STAsync
 	Number        rank;
 	Number        elo;
 	?Number       totalGames;
-	STDuels       duels;
+	STWinStats    duels;
 	STPlayerStats stats;
 
 	Boolean       online;
@@ -56,7 +56,7 @@ class STPlayer extends STAsync
 	{
 		if (from.country)   from.country = new STCountry(from.country, from.countryName);
 		if (from.clan)      from.clan    = new STClan(from.clanTag, from.clan);
-		if (from.duelCount) from.duels   = new STDuels(
+		if (from.duelCount) from.duels   = new STWinStats(
 			from.duelCount,
 			from.duelWins,
 			from.duelLosses,
