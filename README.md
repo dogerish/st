@@ -20,6 +20,7 @@ Documentation should be complete, and hopefully be updated as the library gains 
 * [STDuels](docs/struct/duels.md)
 * [STGamePlayer](docs/struct/gameplayer.md)
 * [STLiveGame](docs/struct/livegame.md)
+* [STMatch](docs/struct/match.md)
 * [STPlayerStats](docs/struct/playerstats.md)
 * [STProperty](docs/struct/property.md)
 * [STResults](docs/struct/results.md)

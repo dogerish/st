@@ -13,6 +13,7 @@ module.exports =
 	STDuels:       require("./struct/duels.js"),
 	STGamePlayer:  require("./struct/gameplayer.js"),
 	STLiveGame:    require("./struct/livegame.js"),
+	STMatch:       require("./struct/match.js"),
 	STPlayerStats: require("./struct/playerstats.js"),
 	STProperty:    require("./struct/property.js"),
 	STResults:     require("./struct/results.js"),
