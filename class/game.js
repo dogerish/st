@@ -8,9 +8,9 @@ const STCountry = require("../struct/country.js");
 
 class STGame extends STAsync
 {
-	static async /*STResults*/ find(/*String*/ host, /*Number*/ port)
+	static async /*STResults*/ find(/*String*/ host = "", /*Number*/ port = "")
 	{
-		let r = await requestv2`games/find?host=${host || ""}&port=${port || ""}`;
+		let r = await requestv2`games/find?host=${host}&port=${port}`;
 		return new STResults(r.stats, r.results.map(g => new STGame(g.id).set(g)));
 	}
 
