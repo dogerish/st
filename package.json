@@ -1,6 +1,6 @@
 {
   "name": "sauertracker",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Library for working with the SauerTracker API in JavaScript.",
   "main": "index.js",
   "scripts": {
