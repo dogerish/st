@@ -58,7 +58,8 @@ class STServer extends STAsync
 	{
 		this.game = new STLiveGame(from);
 		if (from.info) from.info = new STServerInfo(from.info);
-		if (from.country) from.country = new STCountry(from.country, from.countryName);
+		if (from.country !== undefined)
+			from.country = new STCountry(from.country, from.countryName);
 		for (let key of ["totalGames", "rank"])
 			if (from[key]) from[key] = Number(from[key]);
 		return this.copyProps(from);

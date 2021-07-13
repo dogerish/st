@@ -9,9 +9,9 @@ class STCountry
 	*/
 	constructor(/*String*/ abbrev, /*String*/ name)
 	{
-		this.abbrev = abbrev;
-		this.name   = name;
-		this.flag   = `${HOST}/images/flags/${abbrev}.png`;
+		this.abbrev = abbrev || "__";
+		this.name   = name   || "Unknown";
+		this.flag   = `${HOST}/images/flags/${this.abbrev}.png`;
 	}
 }
 

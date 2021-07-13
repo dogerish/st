@@ -54,7 +54,8 @@ class STPlayer extends STAsync
 	// sets properties from an object recieved from the api, returns this
 	/*STPlayer*/ set(/*Object*/ from)
 	{
-		if (from.country)   from.country = new STCountry(from.country, from.countryName);
+		if (from.country !== undefined)
+			from.country = new STCountry(from.country, from.countryName);
 		if (from.clan)      from.clan    = new STClan(from.clanTag, from.clan);
 		if (from.duelCount) from.duels   = new STWinStats(
 			from.duelCount,
