@@ -57,7 +57,7 @@ class STPlayer extends STAsync
 		if (from.country !== undefined)
 			from.country = new STCountry(from.country, from.countryName);
 		if (from.clan)      from.clan    = new STClan(from.clanTag, from.clan);
-		if (from.duelCount) from.duels   = new STWinStats(
+		if (from.duelCount !== undefined) from.duels = new STWinStats(
 			from.duelCount,
 			from.duelWins,
 			from.duelLosses,
