@@ -16,7 +16,7 @@ class NoOverrideError extends SelfAwareError
 class NonJSONReturnError extends SelfAwareError
 {
 	constructor(/*String*/ url)
-	{ super(`"http://${url}" returned non-JSON data.`); }
+	{ super(`"${url}" returned non-JSON data.`); }
 }
 
 class HTTPError extends SelfAwareError

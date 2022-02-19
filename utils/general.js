@@ -1,4 +1,3 @@
-const http = require("http");
 const STGamePlayer = require("../struct/gameplayer.js");
 const STTeam       = require("../struct/team.js");
 

@@ -1,7 +1,7 @@
-const http = require("http");
+const https = require("https");
 const { HTTPError, NonJSONReturnError } = require("./errors.js");
 
-const HOST = "http://sauertracker.net";
+const HOST = "https://sauertracker.net";
 // make a request to API v1
 // use as a format string function, all fillers will be encoded with encodeURIComponent
 // Example: request`path/${name}` would end up requesting to `path/${encodeURIComponent(name)}`.
@@ -13,7 +13,7 @@ function /*Promise<Object>*/ request(parts, ...fillers)
 		+ parts.reduce((acc, val, i) => acc + encodeURIComponent(fillers[i - 1]) + val);
 	return new Promise((resolve, reject) =>
 	{
-		let req = http.request(url, res =>
+		let req = https.request(url, res =>
 		{
 			let data = "";
 			res.on("data", chunk => data += chunk);
