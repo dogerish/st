@@ -1,6 +1,6 @@
 import { STProperty } from "../interface/property";
 
-/*
+/**
  * Asynchronous class, may not have all properties on initialization
  */
 export abstract class STAsync
