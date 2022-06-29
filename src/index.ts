@@ -1,26 +1,21 @@
-import { STAsync          } from "./class/async";
-import { STClan           } from "./class/clan";
-import { STCountry        } from "./class/country";
-import { STGame           } from "./class/game";
-import { STGamePlayer     } from "./class/gameplayer";
-import { STLiveGame       } from "./class/livegame";
-import { STMatch          } from "./class/match";
-import { STPlayer         } from "./class/player";
-import { STResults        } from "./class/results";
-import { STServer         } from "./class/server";
-import { STServerActivity } from "./class/serveractivity";
-import { STStats          } from "./class/stats";
-import { STWinStats       } from "./class/winstats";
-
-import * as errors   from "./utils/errors";
-import * as general  from "./utils/general";
-import * as requests from "./utils/requests";
-
-module.exports = {
-	STAsync, STClan, STCountry, STGame, STGamePlayer, STLiveGame, STMatch, 
-	STPlayer, STResults, STServer, STServerActivity, STStats, STWinStats,
-
-	utils: {
-		errors, general, requests
-	}
-}
+export * from "./class/async";
+export * from "./class/clan";
+export * from "./class/country";
+export * from "./class/game";
+export * from "./class/gameplayer";
+export * from "./class/livegame";
+export * from "./class/match";
+export * from "./class/player";
+export * from "./class/results";
+export * from "./class/server";
+export * from "./class/serveractivity";
+export * from "./class/stats";
+export * from "./class/winstats";
+export * from "./interface/activity";
+export * from "./interface/clanmember";
+export * from "./interface/playerstats";
+export * from "./interface/serverinfo";
+export * from "./interface/team";
+export * from "./utils/errors";
+export * from "./utils/general";
+export * from "./utils/requests";
