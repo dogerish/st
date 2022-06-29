@@ -1,0 +1,6 @@
+{
+	"out": "docs",
+	"cleanOutputDir": true,
+	"entryPoints": "src",
+	"entryPointStrategy": "expand"
+}
