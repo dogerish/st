@@ -14,6 +14,9 @@
 <li><a href="../modules/class_gameplayer.html">class/gameplayer</a></li>
 <li><a href="class_gameplayer.STGamePlayer.html">STGamePlayer</a></li></ul>
 <h1>Class STGamePlayer</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>A player of a game.</p>
+</div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
@@ -46,30 +49,74 @@
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>obj: <span class="tsd-signature-type">any</span></h5></li></ul></div>
+<h5>obj: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"><p>The API-given object that this will take from, which should 
+include attributes of STStats and name (string), state (number), and 
+team (attributes of STStats) attributes.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="class_gameplayer.STGamePlayer.html" class="tsd-signature-type" data-tsd-kind="Class">STGamePlayer</a></h4></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>The name of the player.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/gameplayer.ts#L6">src/class/gameplayer.ts:6</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/gameplayer.ts#L8">src/class/gameplayer.ts:8</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="state" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>state</span><a href="#state" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>The state of the player.</p>
+<table>
+<thead>
+<tr>
+<th align="center">State</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td>Alive</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td>Dead</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>Spawning</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>Lagged</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>Editing</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>Spectator</td>
+</tr>
+</tbody></table>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/gameplayer.ts#L7">src/class/gameplayer.ts:7</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/gameplayer.ts#L20">src/class/gameplayer.ts:20</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="stats" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stats</span><a href="#stats" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">stats<span class="tsd-signature-symbol">:</span> <a href="class_stats.STStats.html" class="tsd-signature-type" data-tsd-kind="Class">STStats</a></div><aside class="tsd-sources">
+<div class="tsd-signature">stats<span class="tsd-signature-symbol">:</span> <a href="class_stats.STStats.html" class="tsd-signature-type" data-tsd-kind="Class">STStats</a></div>
+<div class="tsd-comment tsd-typography"><p>The player&#39;s stats.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/gameplayer.ts#L8">src/class/gameplayer.ts:8</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/gameplayer.ts#L22">src/class/gameplayer.ts:22</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="team" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>team</span><a href="#team" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">team<span class="tsd-signature-symbol">:</span> <a href="../interfaces/interface_team.STTeam.html" class="tsd-signature-type" data-tsd-kind="Interface">STTeam</a></div><aside class="tsd-sources">
+<div class="tsd-signature">team<span class="tsd-signature-symbol">:</span> <a href="../interfaces/interface_team.STTeam.html" class="tsd-signature-type" data-tsd-kind="Interface">STTeam</a></div>
+<div class="tsd-comment tsd-typography"><p>The team the player is on.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/gameplayer.ts#L9">src/class/gameplayer.ts:9</a></li></ul></aside></section></section></div>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/gameplayer.ts#L24">src/class/gameplayer.ts:24</a></li></ul></aside></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -107,7 +154,6 @@
 <li class="tsd-kind-module"><a href="../modules/interface_activity.html">interface/activity</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_clanmember.html">interface/clanmember</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_playerstats.html">interface/playerstats</a></li>
-<li class="tsd-kind-module"><a href="../modules/interface_property.html">interface/property</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_serverinfo.html">interface/serverinfo</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_team.html">interface/team</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_errors.html">utils/errors</a></li>

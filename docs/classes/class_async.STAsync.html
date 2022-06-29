@@ -15,7 +15,8 @@
 <li><a href="class_async.STAsync.html">STAsync</a></li></ul>
 <h1>Class STAsync<code class="tsd-tag ts-flagAbstract">Abstract</code> </h1></div>
 <section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography"><p>Asynchronous class, may not have all properties on initialization</p>
+<div class="tsd-comment tsd-typography"><p>Base class for classes that can asynchronously fetch their data from the 
+API.</p>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
@@ -58,9 +59,11 @@
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a id="fetched" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>fetched</span><a href="#fetched" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">fetched<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
+<div class="tsd-signature">fetched<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+<div class="tsd-comment tsd-typography"><p>True if the class was fetched</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/async.ts#L8">src/class/async.ts:8</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/async.ts#L8">src/class/async.ts:8</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="fetch" class="tsd-anchor"></a>
@@ -69,8 +72,8 @@
 <li class="tsd-signature" id="fetch.fetch-1">fetch<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li></ul>
 <ul class="tsd-descriptions">
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Fetches the object, filling out the current object. This should be an 
-asynchronous function.</p>
+<div class="tsd-comment tsd-typography"><p>Fetches the data from the API, filling out the current object. This 
+should be an asynchronous function.</p>
 
 <h3>Returns</h3><p>This object after fetching</p>
 </div>
@@ -82,7 +85,7 @@ asynchronous function.</p>
 <ul class="tsd-descriptions">
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography">
-<h3>Returns</h3><p>True if this object is fetched or not</p>
+<h3>Returns</h3><p>True if this object is fetched</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="set" class="tsd-anchor"></a>
@@ -100,7 +103,7 @@ asynchronous function.</p>
 <ul class="tsd-parameter-list">
 <li>
 <h5>data: <span class="tsd-signature-type">any</span></h5>
-<div class="tsd-comment tsd-typography"><p>the response from the API</p>
+<div class="tsd-comment tsd-typography"><p>The response data from the API</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -140,7 +143,6 @@ asynchronous function.</p>
 <li class="tsd-kind-module"><a href="../modules/interface_activity.html">interface/activity</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_clanmember.html">interface/clanmember</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_playerstats.html">interface/playerstats</a></li>
-<li class="tsd-kind-module"><a href="../modules/interface_property.html">interface/property</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_serverinfo.html">interface/serverinfo</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_team.html">interface/team</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_errors.html">utils/errors</a></li>

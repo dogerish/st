@@ -16,20 +16,26 @@
 <h1>Function getTeamsAndPlayers</h1></div>
 <section class="tsd-panel">
 <ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-<li class="tsd-signature" id="getTeamsAndPlayers">get<wbr/>Teams<wbr/>And<wbr/>Players<span class="tsd-signature-symbol">(</span>teams<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, players<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../interfaces/interface_team.STTeam.html" class="tsd-signature-type" data-tsd-kind="Interface">STTeam</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><a href="../classes/class_gameplayer.STGamePlayer.html" class="tsd-signature-type" data-tsd-kind="Class">STGamePlayer</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span></li></ul>
+<li class="tsd-signature" id="getTeamsAndPlayers">get<wbr/>Teams<wbr/>And<wbr/>Players<span class="tsd-signature-symbol">(</span>teams<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>score<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span>, players<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../interfaces/interface_team.STTeam.html" class="tsd-signature-type" data-tsd-kind="Interface">STTeam</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><a href="../classes/class_gameplayer.STGamePlayer.html" class="tsd-signature-type" data-tsd-kind="Class">STGamePlayer</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span></li></ul>
 <ul class="tsd-descriptions">
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Get arrays of teams and players as objects</p>
 
-<h3>Returns</h3><p>Teams and players as STTeam and STGamePlayer objects</p>
+<h3>Returns</h3><p>Teams and players as <a href="../interfaces/interface_team.STTeam.html">STTeam</a> and <a href="../classes/class_gameplayer.STGamePlayer.html">STGamePlayer</a> objects</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>teams: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5></li>
+<h5>teams: <span class="tsd-signature-symbol">{ </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>score<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>the <a href="../interfaces/interface_team.STTeam.html">STTeam</a> resolvable objects to be 
+converted.</p>
+</div></li>
 <li>
-<h5>players: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
+<h5>players: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>the <a href="../classes/class_gameplayer.STGamePlayer.html">STGamePlayer</a> resolvable 
+objects to be converted.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><a href="../interfaces/interface_team.STTeam.html" class="tsd-signature-type" data-tsd-kind="Interface">STTeam</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><a href="../classes/class_gameplayer.STGamePlayer.html" class="tsd-signature-type" data-tsd-kind="Class">STGamePlayer</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span></h4></li></ul></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
@@ -68,7 +74,6 @@
 <li class="tsd-kind-module"><a href="../modules/interface_activity.html">interface/activity</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_clanmember.html">interface/clanmember</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_playerstats.html">interface/playerstats</a></li>
-<li class="tsd-kind-module"><a href="../modules/interface_property.html">interface/property</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_serverinfo.html">interface/serverinfo</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_team.html">interface/team</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_errors.html">utils/errors</a></li>

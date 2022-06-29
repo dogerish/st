@@ -15,7 +15,7 @@
 <li><a href="class_player.STPlayer.html">STPlayer</a></li></ul>
 <h1>Class STPlayer</h1></div>
 <section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography"><p>Asynchronous class, may not have all properties on initialization</p>
+<div class="tsd-comment tsd-typography"><p>Class representing a player.</p>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
@@ -66,67 +66,109 @@
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>name: <span class="tsd-signature-type">string</span></h5></li></ul></div>
+<h5>name: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The name of the player, clan tag included if appropriate.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="class_player.STPlayer.html" class="tsd-signature-type" data-tsd-kind="Class">STPlayer</a></h4><aside class="tsd-sources">
 <p>Overrides <a href="class_async.STAsync.html">STAsync</a>.<a href="class_async.STAsync.html#constructor">constructor</a></p></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="clan" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>clan</span><a href="#clan" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">clan<span class="tsd-signature-symbol">?:</span> <a href="class_clan.STClan.html" class="tsd-signature-type" data-tsd-kind="Class">STClan</a></div><aside class="tsd-sources">
+<div class="tsd-signature">clan<span class="tsd-signature-symbol">?:</span> <a href="class_clan.STClan.html" class="tsd-signature-type" data-tsd-kind="Class">STClan</a></div>
+<div class="tsd-comment tsd-typography"><p>The clan the player is in, if the player is in a clan.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L27">src/class/player.ts:27</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L37">src/class/player.ts:37</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="country" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>country</span><a href="#country" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">country<span class="tsd-signature-symbol">?:</span> <a href="class_country.STCountry.html" class="tsd-signature-type" data-tsd-kind="Class">STCountry</a></div><aside class="tsd-sources">
+<div class="tsd-signature">country<span class="tsd-signature-symbol">?:</span> <a href="class_country.STCountry.html" class="tsd-signature-type" data-tsd-kind="Class">STCountry</a></div>
+<div class="tsd-comment tsd-typography"><p>The country the player is from.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L26">src/class/player.ts:26</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L35">src/class/player.ts:35</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="duels" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>duels</span><a href="#duels" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">duels<span class="tsd-signature-symbol">?:</span> <a href="class_winstats.STWinStats.html" class="tsd-signature-type" data-tsd-kind="Class">STWinStats</a></div><aside class="tsd-sources">
+<div class="tsd-signature">duels<span class="tsd-signature-symbol">?:</span> <a href="class_winstats.STWinStats.html" class="tsd-signature-type" data-tsd-kind="Class">STWinStats</a></div>
+<div class="tsd-comment tsd-typography"><p>Information about the player&#39;s duelling history. Wins, losses, ties, and 
+total number of duels played.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L31">src/class/player.ts:31</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L66">src/class/player.ts:66</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="elo" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>elo</span><a href="#elo" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">elo<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature">elo<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>The player&#39;s elo. In the <a href="https://github.com/AngrySnout/SauerTracker">SauerTracker code on 
+GitHub</a>, I found what I 
+assume to be the <a href="https://github.com/AngrySnout/SauerTracker/blob/e20132fb6cacbf6d680f068d7e92d83382b3c32f/src/tracker/game.js#L104">elo calculating 
+function</a>.
+What I interpret from this:</p>
+<ol>
+<li>Every player starts with a base elo (1200 by default), and this elo 
+is then mutated after duels.</li>
+<li>Only duels where both players have at least one frag impact elo.</li>
+<li>The elo is changed depending on the ratio of frags and elo between 
+the player and opponent, as well as the base elo.</li>
+<li>Assuming the game passed the above checks and the <code>frags</code> property of 
+<code>self</code> and <code>opp</code> is for this particular game, the new elo of <code>self</code> 
+after dueling <code>opp</code> is increased or decreased by the rounded result 
+of</li>
+</ol>
+<pre><code class="language-js"><span class="hl-0">10</span><span class="hl-1"> * (</span><span class="hl-2">log</span><span class="hl-1">(</span><span class="hl-3">self</span><span class="hl-1">.</span><span class="hl-3">frags</span><span class="hl-1"> / </span><span class="hl-3">opp</span><span class="hl-1">.</span><span class="hl-3">frags</span><span class="hl-1">) + </span><span class="hl-2">log</span><span class="hl-1">(</span><span class="hl-3">opp</span><span class="hl-1">.</span><span class="hl-3">elo</span><span class="hl-1"> / </span><span class="hl-3">self</span><span class="hl-1">.</span><span class="hl-3">elo</span><span class="hl-1">)) * (</span><span class="hl-3">self</span><span class="hl-1">.</span><span class="hl-3">elo</span><span class="hl-1"> / </span><span class="hl-3">baseElo</span><span class="hl-1">)</span>
+</code></pre>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L29">src/class/player.ts:29</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L59">src/class/player.ts:59</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-inherited"><a id="fetched" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>fetched</span><a href="#fetched" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">fetched<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
+<div class="tsd-signature">fetched<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+<div class="tsd-comment tsd-typography"><p>True if the class was fetched</p>
+</div><aside class="tsd-sources">
 <p>Inherited from <a href="class_async.STAsync.html">STAsync</a>.<a href="class_async.STAsync.html#fetched">fetched</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/async.ts#L8">src/class/async.ts:8</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/async.ts#L8">src/class/async.ts:8</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="latestGames" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>latest<wbr/>Games</span><a href="#latestGames" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">latest<wbr/>Games<span class="tsd-signature-symbol">?:</span> <a href="class_game.STGame.html" class="tsd-signature-type" data-tsd-kind="Class">STGame</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<div class="tsd-signature">latest<wbr/>Games<span class="tsd-signature-symbol">?:</span> <a href="class_game.STGame.html" class="tsd-signature-type" data-tsd-kind="Class">STGame</a><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>An array of the last ten games played.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L34">src/class/player.ts:34</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L72">src/class/player.ts:72</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>The name of the player.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L25">src/class/player.ts:25</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L33">src/class/player.ts:33</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="online" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>online</span><a href="#online" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">online<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<div class="tsd-signature">online<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>True if the player is on a server.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L33">src/class/player.ts:33</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L70">src/class/player.ts:70</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="rank" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>rank</span><a href="#rank" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">rank<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature">rank<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>The player&#39;s rank.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L28">src/class/player.ts:28</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L39">src/class/player.ts:39</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="stats" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>stats</span><a href="#stats" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">stats<span class="tsd-signature-symbol">?:</span> <a href="../interfaces/interface_playerstats.STPlayerStats.html" class="tsd-signature-type" data-tsd-kind="Interface">STPlayerStats</a></div><aside class="tsd-sources">
+<div class="tsd-signature">stats<span class="tsd-signature-symbol">?:</span> <a href="../interfaces/interface_playerstats.STPlayerStats.html" class="tsd-signature-type" data-tsd-kind="Interface">STPlayerStats</a></div>
+<div class="tsd-comment tsd-typography"><p>The player&#39;s statistics.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L32">src/class/player.ts:32</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L68">src/class/player.ts:68</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="totalGames" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>total<wbr/>Games</span><a href="#totalGames" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">total<wbr/>Games<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature">total<wbr/>Games<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>The total number of games this player has played.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dogerish/st-js/blob/293602f/src/class/player.ts#L30">src/class/player.ts:30</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/dogerish/st-js/blob/b9c6f23/src/class/player.ts#L61">src/class/player.ts:61</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="fetch" class="tsd-anchor"></a>
@@ -135,8 +177,8 @@
 <li class="tsd-signature" id="fetch.fetch-1">fetch<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="class_player.STPlayer.html" class="tsd-signature-type" data-tsd-kind="Class">STPlayer</a><span class="tsd-signature-symbol">&gt;</span></li></ul>
 <ul class="tsd-descriptions">
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Fetches the object, filling out the current object. This should be an 
-asynchronous function.</p>
+<div class="tsd-comment tsd-typography"><p>Fetches the data from the API, filling out the current object. This 
+should be an asynchronous function.</p>
 
 <h3>Returns</h3><p>This object after fetching</p>
 </div>
@@ -158,7 +200,7 @@ asynchronous function.</p>
 <ul class="tsd-descriptions">
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography">
-<h3>Returns</h3><p>True if this object is fetched or not</p>
+<h3>Returns</h3><p>True if this object is fetched</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="class_async.STAsync.html">STAsync</a>.<a href="class_async.STAsync.html#isFetched">isFetched</a></p></aside></li></ul></section>
@@ -177,7 +219,7 @@ asynchronous function.</p>
 <ul class="tsd-parameter-list">
 <li>
 <h5>data: <span class="tsd-signature-type">any</span></h5>
-<div class="tsd-comment tsd-typography"><p>the response from the API</p>
+<div class="tsd-comment tsd-typography"><p>The response data from the API</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="class_player.STPlayer.html" class="tsd-signature-type" data-tsd-kind="Class">STPlayer</a></h4><aside class="tsd-sources">
 <p>Overrides <a href="class_async.STAsync.html">STAsync</a>.<a href="class_async.STAsync.html#set">set</a></p></aside></li></ul></section>
@@ -188,14 +230,21 @@ asynchronous function.</p>
 <ul class="tsd-descriptions">
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Find up to 200 players matching a given query</p>
+
+<h3>Returns</h3><p>an array of up to 200 players that match the query.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5></li>
+<h5>name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5>
+<div class="tsd-comment tsd-typography"><p>The name to match, or an empty string to not match any 
+name.</p>
+</div></li>
 <li>
-<h5>country: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5></li></ul></div>
+<h5>country: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5>
+<div class="tsd-comment tsd-typography"><p>A country abbreviation, such as CA for Canada.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="class_player.STPlayer.html" class="tsd-signature-type" data-tsd-kind="Class">STPlayer</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
@@ -234,7 +283,6 @@ asynchronous function.</p>
 <li class="tsd-kind-module"><a href="../modules/interface_activity.html">interface/activity</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_clanmember.html">interface/clanmember</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_playerstats.html">interface/playerstats</a></li>
-<li class="tsd-kind-module"><a href="../modules/interface_property.html">interface/property</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_serverinfo.html">interface/serverinfo</a></li>
 <li class="tsd-kind-module"><a href="../modules/interface_team.html">interface/team</a></li>
 <li class="tsd-kind-module"><a href="../modules/utils_errors.html">utils/errors</a></li>
