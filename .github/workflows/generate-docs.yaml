@@ -1,0 +1,19 @@
+name: Generate Documenatation
+on: push
+
+concurrency:
+  group: gendocs
+  cancel-in-progress: true
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Generate and push docs
+        run: |
+          npm ci
+          npx typedoc
+          git commit docs/ -m "Generate docs"
+          git push
