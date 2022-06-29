@@ -2,7 +2,9 @@
   "name": "sauertracker",
   "version": "2.0.3",
   "description": "Library for working with the SauerTracker API in JavaScript or TypeScript.",
-  "files": ["build/**/*"],
+  "files": [
+    "build/**/*"
+  ],
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +26,7 @@
   "homepage": "https://github.com/dogerish/st-js#readme",
   "devDependencies": {
     "@types/node": "^18.0.0",
+    "typedoc": "^0.23.2",
     "typescript": "^4.7.4"
   }
 }
