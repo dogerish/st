@@ -1,7 +1,7 @@
 {
   "name": "sauertracker",
   "version": "2.0.3",
-  "description": "Library for working with the SauerTracker API in JavaScript.",
+  "description": "Library for working with the SauerTracker API in JavaScript or TypeScript.",
   "files": ["build/**/*"],
   "main": "build/index.js",
   "scripts": {
