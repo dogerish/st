@@ -6,6 +6,7 @@ import { STCountry           } from "./country";
 import { STServerActivity    } from "./serveractivity";
 import { STServerInfo        } from "../interface/serverinfo";
 
+/** Class representing a server. */
 export class STServer extends STAsync
 {
 	/**
@@ -18,22 +19,41 @@ export class STServer extends STAsync
 		);
 	}
 
+	/** The host or IP of the server. */
 	host: string;
+	/** The port of the server. */
 	port: number;
+	/** The server's description. */
 	description?: string;
+	/** The description styled with html. */
 	descriptionStyled?: string;
+	/** The number of clients on the server. */
 	clients?: number;
+	/** The maximum number of clients the server supports. */
 	maxClients?: number;
+	/** Whether or not the server is full. */
 	isFull?: boolean;
+	/** Whether or not the server is a zombie server. */
 	zombie?: boolean;
+	/** The game that's currently in progress on the server. */
 	game?: STLiveGame;
+	/** The current master mode of the server. */
 	masterMode?: string;
+	/** The server info. */
 	info?: STServerInfo;
+	/** Where the server is based. */
 	country?: STCountry;
+	/** The version the server is running. */
 	version?: number;
+	/** How many games have been played on the server. */
 	totalGames?: number;
+	/** The server's rank. */
 	rank?: number;
 
+	/**
+	 * @param host - The host or IP of the server.
+	 * @param port - The port of the server.
+	 */
 	constructor(host: string, port: number)
 	{
 		super();

@@ -15,9 +15,18 @@ export function percent(n: number, t: number): number
 /**
  * Get arrays of teams and players as objects
  *
- * @returns Teams and players as STTeam and STGamePlayer objects
+ * @param teams - the {@link interface/team!STTeam} resolvable objects to be 
+ * converted.
+ * @param players -  the {@link class/gameplayer!STGamePlayer} resolvable 
+ * objects to be converted.
+ *
+ * @returns Teams and players as {@link interface/team!STTeam} and {@link 
+ * class/gameplayer!STGamePlayer} objects
  */
-export function getTeamsAndPlayers(teams: any[], players: any[]):
+export function getTeamsAndPlayers(
+	teams: { name: string, score: number }[],
+	players: any[]
+):
 	[STTeam[], STGamePlayer[]]
 {
 	let teamsMap: Map<string, STTeam> = new Map(teams.map(

@@ -5,6 +5,7 @@ import { STGame                    } from "./game";
 import { STWinStats                } from "./winstats";
 import { STClanMember              } from "../interface/clanmember";
 
+/** Class for clan information. */
 export class STClan extends STAsync
 {
 	/**
@@ -20,14 +21,23 @@ export class STClan extends STAsync
 		);
 	}
 
+	/** The clan's tag. */
 	tag: string;
+	/** The title of the clan. */
 	title?: string;
+	/** A link to the clan's website. */
 	website?: string;
+	/** The last 10 games that this clan participated in. */
 	games?: STGame[];
+	/** The members of this clan. */
 	members?: STClanMember[];
+	/** The rank of this clan among other clans. */
 	rank?: number;
+	/** The win rate of this clan. `(wins + ties / 2) / totalGames` */
 	rate?: number;
+	/** How many points the clan has. `(wins + ties / 2)^2 / totalGames` */
 	points?: number;
+	/** The statistics on wins, losses, ties, and total games. */
 	winstats?: STWinStats;
 
 	constructor(tag: string)

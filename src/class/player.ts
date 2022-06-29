@@ -9,10 +9,17 @@ import { STPlayerStats             } from "../interface/playerstats";
 import { STStats                   } from "./stats";
 import { STActivity                } from "../interface/activity";
 
+/** Class representing a player. */
 export class STPlayer extends STAsync
 {
 	/**
 	 * Find up to 200 players matching a given query
+	 *
+	 * @param name - The name to match, or an empty string to not match any 
+	 * name.
+	 * @param country - A country abbreviation, such as CA for Canada.
+	 *
+	 * @returns an array of up to 200 players that match the query.
 	 */
 	static async find(name: string = "", country: string = ""): Promise<STPlayer[]>
 	{
@@ -22,17 +29,51 @@ export class STPlayer extends STAsync
 		);
 	}
 
+	/** The name of the player. */
 	name:         string;
+	/** The country the player is from. */
 	country?:     STCountry;
+	/** The clan the player is in, if the player is in a clan. */
 	clan?:        STClan;
+	/** The player's rank. */
 	rank?:        number;
+	/**
+	 * The player's elo. In the [SauerTracker code on 
+	 * GitHub](https://github.com/AngrySnout/SauerTracker), I found what I 
+	 * assume to be the [elo calculating 
+	 * function](https://github.com/AngrySnout/SauerTracker/blob/e20132fb6cacbf6d680f068d7e92d83382b3c32f/src/tracker/game.js#L104).
+	 * What I interpret from this:
+	 * 1. Every player starts with a base elo (1200 by default), and this elo 
+	 *    is then mutated after duels.
+	 * 2. Only duels where both players have at least one frag impact elo.
+	 * 3. The elo is changed depending on the ratio of frags and elo between 
+	 *    the player and opponent, as well as the base elo.
+	 * 4. Assuming the game passed the above checks and the `frags` property of 
+	 *    `self` and `opp` is for this particular game, the new elo of `self` 
+	 *    after dueling `opp` is increased or decreased by the rounded result 
+	 *    of
+	 * ```js
+	 * 10 * (log(self.frags / opp.frags) + log(opp.elo / self.elo)) * (self.elo / baseElo)
+	 * ```
+	 */
 	elo?:         number;
+	/** The total number of games this player has played. */
 	totalGames?:  number;
+	/**
+	 * Information about the player's duelling history. Wins, losses, ties, and 
+	 * total number of duels played.
+	 */
 	duels?:       STWinStats;
+	/** The player's statistics. */
 	stats?:       STPlayerStats;
+	/** True if the player is on a server. */
 	online?:      boolean;
+	/** An array of the last ten games played. */
 	latestGames?: STGame[];
 
+	/**
+	 * @param name - The name of the player, clan tag included if appropriate.
+	 */
 	constructor(name: string)
 	{
 		super();

@@ -1,20 +1,20 @@
-import { STProperty } from "../interface/property";
-
 /**
- * Asynchronous class, may not have all properties on initialization
+ * Base class for classes that can asynchronously fetch their data from the 
+ * API.
  */
 export abstract class STAsync
 {
+	/** True if the class was fetched */
 	protected fetched: boolean = false;
 
 	/**
-	 * @returns True if this object is fetched or not
+	 * @returns True if this object is fetched
 	 */
 	isFetched(): boolean { return this.fetched; }
 
 	/**
-	 * Fetches the object, filling out the current object. This should be an 
-	 * asynchronous function.
+	 * Fetches the data from the API, filling out the current object. This 
+	 * should be an asynchronous function.
 	 *
 	 * @returns This object after fetching
 	 */
@@ -23,7 +23,7 @@ export abstract class STAsync
 	/**
 	 * Sets properties based on the response sent from a request
 	 *
-	 * @param data - the response from the API
+	 * @param data - The response data from the API
 	 *
 	 * @returns This object after setting properties
 	 */

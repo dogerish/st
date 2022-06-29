@@ -1,6 +1,7 @@
 const https = require("https");
 import { HTTPError, NonJSONReturnError } from "./errors";
 
+/** The host to make http requests to. */
 export const HOST = "https://sauertracker.net";
 
 /**
@@ -59,7 +60,7 @@ export function request(
 
 /**
  * Make a request to API v2. Also used as a format string function, and calls 
- * the request function under the hood.
+ * the {@link request} function under the hood.
  */
 export function requestv2(
 	parts: TemplateStringsArray | string[],
@@ -68,7 +69,9 @@ export function requestv2(
 { return request(["v2/" + parts[0], ...parts.slice(1)], ...fillers); }
 
 /**
- * Whether or not an error is an HTTPError with code 404
+ * Whether or not an error is an {@link utils/errors!HTTPError} with code 404
+ *
+ * @param error - The error to check
  * 
  * @returns True if the error is a 404
  */

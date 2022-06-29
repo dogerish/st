@@ -8,8 +8,18 @@ import { STCountry          } from "./country";
 import { STTeam             } from "../interface/team";
 import { STGamePlayer       } from "./gameplayer";
 
+/** Class representing a game. */
 export class STGame extends STAsync
 {
+	/**
+	 * Asynchronously finds up to 20 games that match the given query. Both 
+	 * arguments are optional. Results are sorted by frags descendingly.
+	 *
+	 * @param host - The host server of the game.
+	 * @param port - The port of the server.
+	 *
+	 * @returns The search results and stats.
+	 */
 	static async find(host: string = "", port: number | string = ""): 
 		Promise<STResults>
 	{
@@ -20,17 +30,41 @@ export class STGame extends STAsync
 		);
 	}
 
+	/** The SauerTracker game ID. */
 	id:       number;
+	/** The date when this game happened. */
 	date?:    Date;
+	/** The server used for the game. */
 	server?:  STServer;
+	/** Number of clients that were present. */
 	clients?: number;
+	/** An array containing the teams that participated. */
 	teams?:   STTeam[];
+	/** An array of the players involved, including spectators. */
 	players?: STGamePlayer[];
+	/**
+	 * Metadata for this game. Possibilities known to me:
+	 * | {@link STGame.type} | String      | Number |
+	 * | ------------------- | ----------- | ------ |
+	 * | clanwar             | clan tag    | score  |
+	 * | duel                | player name | score  |
+	 *
+	 * *Please add or notify me of any and all other possibilities you find.*
+	 */
 	meta?:    [string, number];
+	/** The game mode used for this game. */
 	mode?:    string;
+	/**
+	 * The type of game this was. `public`, `duel`, `mix`, `clanwar`, `intern`, 
+	 * or `other`
+	 */
 	type?:    string;
+	/** The name of the map this game was played on. */
 	map?:     string;
 
+	/**
+	 * @param id - The SauerTracker game ID.
+	 */
 	constructor(id: number)
 	{
 		super();
