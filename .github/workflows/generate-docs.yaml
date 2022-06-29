@@ -15,5 +15,8 @@ jobs:
         run: |
           npm ci
           npx typedoc
-          git commit docs/ -m "Generate docs"
+          git config user.name doc-generator-action
+          git config user.email doc-generator-action@github.com
+          git add docs/
+          git commit -m "Generate docs"
           git push
